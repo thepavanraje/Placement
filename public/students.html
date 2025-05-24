@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Portal</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body class="students-page">
+  <nav class="navbar">
+    <div class="logo">Placement System</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="students.html">Students</a></li>
+      <li><a href="companies.html">Companies</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+  <section class="student-dashboard">
+    <!-- Internship/Job Opportunities -->
+    <div class="dashboard-card">
+      <h3>Internship/Job Opportunities</h3>
+      <ul id="opportunities">
+        <!-- Opportunities will be loaded here -->
+      </ul>
+    </div>
+    <!-- Application Status -->
+    <div class="dashboard-card">
+      <h3>Application Status</h3>
+      <ul id="application-status">
+        <!-- Application statuses will be loaded here -->
+      </ul>
+    </div>
+    <!-- Upcoming Events -->
+    <div class="dashboard-card">
+      <h3>Upcoming Events</h3>
+      <ul id="events">
+        <!-- Events will be loaded here -->
+      </ul>
+    </div>
+    <!-- Resume Upload and Profile Management -->
+    <div class="dashboard-card">
+      <h3>Profile Management</h3>
+      <form id="resume-upload-form" enctype="multipart/form-data" method="POST">
+        <input type="file" name="resume" required>
+        <button type="submit">Upload Resume</button>
+      </form>
+      <div id="profile-info">
+        <!-- Profile info will be loaded here -->
+      </div>
+    </div>
+  </section>
+  <script src="student.js"></script>
+</body>
+</html>

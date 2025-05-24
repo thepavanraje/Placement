@@ -1,0 +1,255 @@
+/* Minimalist, modern color palette */
+:root {
+  --primary-bg: #f7f8fa;
+  --sidebar-bg: #22223b;
+  --accent: #4ea8de;
+  --accent-hover: #22223b;
+  --text-main: #22223b;
+  --text-light: #fff;
+  --container-bg: rgba(255,255,255,0.85);
+  --shadow: 0 2px 16px rgba(34,34,59,0.07);
+}
+
+/* Reset and base styles */
+body {
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  background: url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+  background-size: cover;
+  color: var(--text-main);
+  min-height: 100vh;
+}
+
+/* Sidebar (vertical header) */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: var(--sidebar-bg);
+  padding: 2.5rem 1.2rem 2rem 1.2rem;
+  box-shadow: var(--shadow);
+  z-index: 100;
+}
+
+.logo {
+  color: var(--accent);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  letter-spacing: 1px;
+  width: 100%;
+  text-align: left;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.nav-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.07rem;
+  transition: color 0.2s, background 0.2s;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  display: block;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  background: var(--accent);
+  color: var(--sidebar-bg);
+}
+
+/* Push main content to the right */
+body,
+.hero,
+.form-section,
+.student-dashboard,
+.dashboard-container {
+  margin-left: 220px;
+}
+
+/* Minimalist containers */
+.hero,
+.form-section,
+.dashboard-card {
+  background: var(--container-bg);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 1rem 3rem 1rem;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.cta-btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.7rem 2rem;
+  background: var(--accent);
+  color: var(--text-light);
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  transition: background 0.2s;
+}
+.cta-btn:hover {
+  background: var(--accent-hover);
+  color: var(--text-light);
+}
+
+.dashboard-container,
+.student-dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.dashboard-card {
+  padding: 1.5rem;
+  width: 320px;
+  min-height: 200px;
+  margin-bottom: 1rem;
+  background: var(--container-bg);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.dashboard-card h3 {
+  margin-top: 0;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.dashboard-card form input,
+.dashboard-card form textarea {
+  width: 95%;
+  margin: 0.5rem 0;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #e0e1e6;
+  background: #f7f8fa;
+  font-size: 1rem;
+}
+
+.dashboard-card form button {
+  padding: 0.6rem 1.5rem;
+  background: var(--accent);
+  color: var(--text-light);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  transition: background 0.2s;
+}
+.dashboard-card form button:hover {
+  background: var(--accent-hover);
+}
+
+.form-section {
+  max-width: 400px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: var(--container-bg);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.form-section input {
+  width: 90%;
+  padding: 0.7rem;
+  margin: 0.5rem 0;
+  border: 1px solid #e0e1e6;
+  border-radius: 6px;
+  background: #f7f8fa;
+  font-size: 1rem;
+}
+
+.form-section button {
+  padding: 0.7rem 2rem;
+  background: var(--accent);
+  color: var(--text-light);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  transition: background 0.2s;
+}
+.form-section button:hover {
+  background: var(--accent-hover);
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  .navbar {
+    position: static;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+    min-height: unset;
+  }
+  .logo {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    text-align: left;
+  }
+  .nav-links {
+    flex-direction: row;
+    gap: 1rem;
+    width: auto;
+    margin-left: 2rem;
+  }
+  body,
+  .hero,
+  .form-section,
+  .student-dashboard,
+  .dashboard-container {
+    margin-left: 0;
+  }
+  .hero {
+    padding: 2rem 1rem;
+  }
+}
+
+/* Page-specific backgrounds (minimalist, subtle overlay) */
+body.students-page {
+  background: linear-gradient(rgba(78,168,222,0.08),rgba(34,34,59,0.08)), url('https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+  background-size: cover;
+}
+body.companies-page {
+  background: linear-gradient(rgba(78,168,222,0.08),rgba(34,34,59,0.08)), url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+  background-size: cover;
+}
+body.auth-page {
+  background: linear-gradient(rgba(78,168,222,0.08),rgba(34,34,59,0.08)), url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+  background-size: cover;
+}
+body.index-page {
+  background: url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+  background-size: cover;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Companies - Placement System</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body class="companies-page">
+  <nav class="navbar">
+    <div class="logo">Placement System</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="students.html">Students</a></li>
+      <li><a href="companies.html">Companies</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+  <section class="company-section">
+    <div class="dashboard-container">
+      <!-- Post a new job -->
+      <div class="dashboard-card">
+        <h3>Post a Job</h3>
+        <form id="postJobForm">
+          <input type="text" name="title" placeholder="Job Title" required><br>
+          <input type="text" name="location" placeholder="Location" required><br>
+          <textarea name="description" placeholder="Job Description" required></textarea><br>
+          <button type="submit">Post Job</button>
+        </form>
+      </div>
+      <!-- List of posted jobs -->
+      <div class="dashboard-card">
+        <h3>Your Job Listings</h3>
+        <ul id="jobList">
+          <!-- Jobs will be loaded here -->
+        </ul>
+      </div>
+      <!-- Review applications -->
+      <div class="dashboard-card">
+        <h3>Applications</h3>
+        <ul id="applicationList">
+          <!-- Applications will be loaded here -->
+        </ul>
+      </div>
+      <!-- Messaging system -->
+      <div class="dashboard-card">
+        <h3>Contact Shortlisted Candidates</h3>
+        <form id="messageForm">
+          <input type="text" name="candidate" placeholder="Candidate Username" required><br>
+          <textarea name="message" placeholder="Your message" required></textarea><br>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <script src="companies.js"></script>
+</body>
+</html>
